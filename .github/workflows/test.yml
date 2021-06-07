@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Install node-gyp
+        run: sudo apt-get install -y node-gyp
       - name: Install modules
         run: yarn
       - name: Compile debug build
