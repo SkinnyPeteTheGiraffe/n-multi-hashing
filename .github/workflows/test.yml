@@ -10,9 +10,9 @@ jobs:
       - name: Compile debug build
         run: |
           # make file runnable
-          chmod +x "${GITHUB_WORKSPACE}/build-debug.sh"
+          chmod +x "${GITHUB_WORKSPACE}/.github/build-debug.sh"
 
           # run script
-          ${GITHUB_WORKSPACE}/build-debug.sh
+          ${GITHUB_WORKSPACE}/.github/build-debug.sh
       - name: Run tests
         run: yarn test
