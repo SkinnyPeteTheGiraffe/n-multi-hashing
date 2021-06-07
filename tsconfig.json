@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./dist",
+    "strictNullChecks": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "lib": ["es2018", "esnext.asynciterable"],
+    "typeRoots": [
+      "./__types__", "./node_modules/@types"]
+  },
+  "exclude": [
+    "node_modules",
+    "__tests__",
+    "__types__",
+    "dist"
+  ]
+}
+
