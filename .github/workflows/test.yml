@@ -8,6 +8,11 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Compile debug build
-        run: ${GITHUB_WORKSPACE}/build-debug.sh
+        run: |
+          # make file runnable
+          chmod +x "${GITHUB_WORKSPACE}/build-debug.sh"
+
+          # run script
+          ${GITHUB_WORKSPACE}/build-debug.sh
       - name: Run tests
         run: yarn test
