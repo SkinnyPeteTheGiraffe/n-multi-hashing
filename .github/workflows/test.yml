@@ -10,9 +10,6 @@ jobs:
       - name: Global install node-gyp
         run: yarn global add node-gyp
       - name: Compile debug build
-        run: |
-          node-gyp clean
-          node-gyp configure
-          node-gyp build --debug
+        run: yarn build:debug
       - name: Run tests
         run: yarn test
