@@ -9,10 +9,8 @@ jobs:
         run: yarn
       - name: Compile debug build
         run: |
-          # make file runnable
-          chmod +x "${GITHUB_WORKSPACE}/.github/build-debug.sh"
-
-          # run script
-          ${GITHUB_WORKSPACE}/.github/build-debug.sh
+          node-gyp clean
+          node-gyp configure
+          node-gyp build --debug
       - name: Run tests
         run: yarn test
