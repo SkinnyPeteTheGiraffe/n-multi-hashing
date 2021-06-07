@@ -8,6 +8,6 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Compile debug build
-        run: ./build-debug.sh
+        run: ${GITHUB_WORKSPACE}/build-debug.sh
       - name: Run tests
         run: yarn test
