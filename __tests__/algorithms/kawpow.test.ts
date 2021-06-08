@@ -1,4 +1,4 @@
-import * as hashing from '../../build/Debug/n-hashing.node';
+import * as hashing from '../../build/Debug/n-multi-hashing.node';
 import { reverseBytes } from '../../src/utils';
 
 const expectedMixHash = '89732e5ff8711c32558a308fc4b8ee77416038a70995670e3eb84cbdead2e337';

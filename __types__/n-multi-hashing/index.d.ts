@@ -1,4 +1,4 @@
-declare module '*/n-hashing.node' {
+declare module '*/n-multi-hashing.node' {
     function bcrypt(buffer: Buffer, out: Buffer, n: number): any;
     function blake(buffer: Buffer, out: Buffer, n: number): any;
     function c11(buffer: Buffer, out: Buffer, n: number): any;

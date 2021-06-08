@@ -1,4 +1,4 @@
-import * as hashing from '../../build/Debug/n-hashing.node';
+import * as hashing from '../../build/Debug/n-multi-hashing.node';
 import { serializeHeader } from '../../src/utils';
 
 const valid = '808beaa3cd7f206d8ce3f0bf07cb0d45adea993c1fff6703b94fac4c9b1b4936';
