@@ -1,5 +1,7 @@
 # N-Multi-Hashing
 
+_For list of supported Algorithms, scroll to bottom of README_
+
 A rewrite of [node-multi-hashing](https://github.com/SkinnyPeteTheGiraffe/node-multi-hashing) in Typescript,
 more algorithms, and proper unit testing. This version should be much more stable, as full coverage unit testing, will
 ensure consistency of hashing functions, warning developers of any breaking changes. This version will also include
@@ -68,3 +70,27 @@ BTC: bc1qmqwa6jvus9kr3nusexvuewt0h75jj5qwka8a2u
 ETH: 0x5BcEcC9710a3Aa47F84BaCb1E5EE6591dEa7a32e
 RVN: RBfEoddXbXDR8fLLyCcvy5FUgdvpdof5f3
 ```
+
+
+### Supported Algorithms
+| Algorithms            |                  |                |
+|-----------------------|------------------|----------------|
+| Argon2d               |  Lyra2RE         |  X15           |
+| Argon2i               |  Lyra2REv2       |  X16r*         |
+| Argon2id              |  Lyra2REv3       |  X16rV2*       |
+| Bcrypt*               |  Lyra2z          |  Yescrypt      |
+| Blake*                |  NeoScrypt       |                |
+| boolberry             |  NIST5           |                |
+| C11*                  |  Quark           |                |
+| CryptoNight           |  Qubit           |                |
+| CryptoNight Fast      |  Scrypt*         |                |
+| Fresh*                |  ScryptJane      |                |
+| Fugue*                |  ScryptN         |                |
+| Groestl*              |  SHA1            |                |
+| Groestl Myriad*       |  SHA256d*        |                |
+| Hefty1                |  Shavite3        |                |
+| KAWPOW*               |  Skein           |                |
+| Keccak                |  X11             |                |
+| LBRY                  |  X13             |                |
+
+`* Includes Unit Tests`
