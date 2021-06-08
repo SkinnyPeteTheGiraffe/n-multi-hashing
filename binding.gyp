@@ -2,7 +2,7 @@
 {
     "targets": [
         {
-            "target_name": "n-hashing",
+            "target_name": "n-multi-hashing",
             "sources": [
                 "src/algorithms/multihashing.cc",
                 "src/algorithms/bcrypt.c",

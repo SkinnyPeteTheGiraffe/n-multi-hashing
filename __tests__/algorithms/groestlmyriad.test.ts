@@ -1,9 +1,9 @@
 import * as hashing from '../../build/Debug/n-hashing.node';
 import { serializeHeader } from '../../src/utils';
 
-const valid = 'b61d1f871aa034e2f5b129dd84366d53a759e0c55210f19fbacb2bb933f2304a';
+const valid = '8500d02bcc680b38f945e734b6c6e96bf7ecd13d6a4c4fbe7db3b9010a4cf2f8';
 
-describe('Testing C11 Algorithm', () => {
+describe('Testing Fugue Algorithm', () => {
     const nTime = '1390103681';
     const nonce = '128987';
     const merkleTree = Buffer.from('ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7', 'hex');
@@ -17,8 +17,8 @@ describe('Testing C11 Algorithm', () => {
         nTime,
         nonce
     );
-    it('Test Valid C11 Hash', () => {
+    it('Test Valid Fugue Hash', () => {
         const hashOutBuf = Buffer.alloc(32, 0);
-        expect(hashing.c11(headerBuffer, hashOutBuf, 32).toString('hex')).toEqual(valid);
+        expect(hashing.fugue(headerBuffer, hashOutBuf, 32).toString('hex')).toEqual(valid);
     });
 });

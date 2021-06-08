@@ -1,5 +1,5 @@
 import * as hashing from '../../build/Debug/n-hashing.node';
-import {reverseBytes} from '../../src/utils';
+import { reverseBytes } from '../../src/utils';
 
 const expectedMixHash = '89732e5ff8711c32558a308fc4b8ee77416038a70995670e3eb84cbdead2e337';
 const expectedHash = '0000000718ba5143286c46f44eee668fdf59b8eba810df21e4e2f4ec9538fc20';
@@ -14,13 +14,13 @@ const hash = (headerHashBuf: Buffer, nonceBuf: Buffer, blockHeight: number) => {
     hashing.kawpow(headerHashBuf, nonceBuf, blockHeight, mixOutBuf, hashOutBuf);
     const mix = mixOutBuf.toString('hex');
     const output = hashOutBuf.toString('hex');
-    return{
+    return {
         output,
         mix,
         buffers: {
             output: hashOutBuf,
-            mix: mixOutBuf
-        }
+            mix: mixOutBuf,
+        },
     };
 };
 
@@ -28,26 +28,24 @@ const verify = (mixHashBuf: Buffer, expectedHash: Buffer, iterations: number) =>
     const verifyHashOutBuf = Buffer.alloc(32);
     for (let i = 0; i < iterations; i++) {
         const isValid = hashing.kawpow_verify(headerHashBuf, nonceBuf, blockHeight, mixHashBuf, verifyHashOutBuf);
-        if (!isValid)
-            return false;
+        if (!isValid) return false;
     }
     const verifiedHash = verifyHashOutBuf.toString('hex');
     return verifiedHash === expectedHash.toString('hex');
 };
 
-
 describe('Testing KawPOW Algorithm', () => {
     it('Test Valid KawPOW Hash', () => {
-        const { output } = hash(headerHashBuf, nonceBuf, blockHeight)
-        expect(output).toEqual(expectedHash)
+        const { output } = hash(headerHashBuf, nonceBuf, blockHeight);
+        expect(output).toEqual(expectedHash);
     });
 
     it('Test Valid KawPOW Mixed Hash', () => {
-        const { mix } = hash(headerHashBuf, nonceBuf, blockHeight)
-        expect(mix).toEqual(expectedMixHash)
+        const { mix } = hash(headerHashBuf, nonceBuf, blockHeight);
+        expect(mix).toEqual(expectedMixHash);
     });
-    it('Validate Hash Over 1000 Iterations', () => {
-        const { buffers } = hash(headerHashBuf, nonceBuf, blockHeight)
-        expect(verify(buffers.mix, buffers.output, 1000)).toBeTruthy()
+    it('Validate Hash Over 100 Iterations', () => {
+        const { buffers } = hash(headerHashBuf, nonceBuf, blockHeight);
+        expect(verify(buffers.mix, buffers.output, 100)).toBeTruthy();
     });
 });

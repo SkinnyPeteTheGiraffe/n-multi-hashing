@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "build": "tsc",
+    "build:binaries": "node-gyp clean && node-gyp configure && node-gyp build",
     "build:debug": "node-gyp clean && node-gyp configure && node-gyp build --debug"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bindings": "^1.5.0",
     "@types/jest": "^26.0.23",
     "jest": "^27.0.4",
     "nodemon": "^2.0.7",

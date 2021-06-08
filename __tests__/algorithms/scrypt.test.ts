@@ -8,7 +8,7 @@ describe('Testing Scrypt Algorithm', () => {
     const headerBuffer = serializeHeader(
         {
             bits: '1f01ffff',
-            previousblockhash: '0',
+            previousBlockHash: '0',
             version: 1,
         },
         merkleTree.toString('hex'),

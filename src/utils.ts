@@ -1,9 +1,8 @@
-import {RpcData} from "./types";
+import { RpcData } from './types';
 
 const reverseBuffer = (buff: Buffer) => {
     const reversed = Buffer.alloc(buff.length);
-    for (let i = buff.length - 1; i >= 0; i--)
-        reversed[buff.length - i - 1] = buff[i];
+    for (let i = buff.length - 1; i >= 0; i--) reversed[buff.length - i - 1] = buff[i];
     return reversed;
 };
 
@@ -22,10 +21,10 @@ export const serializeHeader = (rpcData: RpcData, merkleRoot: string, nTime: str
     const header = Buffer.alloc(80);
     let position = 0;
     header.write(nonce, position, 4, 'hex');
-    header.write(rpcData.bits, position += 4, 4, 'hex');
-    header.write(nTime, position += 4, 4, 'hex');
-    header.write(merkleRoot, position += 4, 32, 'hex');
-    header.write(rpcData.previousblockhash, position += 32, 32, 'hex');
+    header.write(rpcData.bits, (position += 4), 4, 'hex');
+    header.write(nTime, (position += 4), 4, 'hex');
+    header.write(merkleRoot, (position += 4), 32, 'hex');
+    header.write(rpcData.previousBlockHash, (position += 32), 32, 'hex');
     header.writeUInt32BE(rpcData.version, position + 32);
     return reverseBuffer(header);
 };

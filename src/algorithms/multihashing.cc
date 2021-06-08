@@ -109,7 +109,6 @@ using namespace v8;
  DECLARE_CALLBACK(x11, x11_hash, 32);
  DECLARE_CALLBACK(x13, x13_hash, 32);
  DECLARE_CALLBACK(x15, x15_hash, 32);
- DECLARE_CALLBACK(x16r, x16r_hash, 32);
  DECLARE_CALLBACK(x16rv2, x16rv2_hash, 32);
  DECLARE_CALLBACK(yescrypt, yescrypt_hash, 32);
 
@@ -436,6 +435,26 @@ DECLARE_FUNC(boolberry) {
     uint64_t spad_len = Buffer::Length(target_spad);
 
     boolberry_hash(input, input_len, scratchpad, spad_len, output, height);
+
+    SET_BUFFER_RETURN(output, 32);
+}
+
+NAN_METHOD(x16r) {
+
+    if (info.Length() < 1)
+        RETURN_EXCEPT("You must provide one argument.");
+
+    Local<Object> target = Nan::To<Object>(info[0]).ToLocalChecked();
+
+    if(!Buffer::HasInstance(target))
+        RETURN_EXCEPT("Argument should be a buffer object.");
+
+    char * input = Buffer::Data(target);
+    char *output = (char*) malloc(sizeof(char) * 32);
+
+    uint32_t input_len = Buffer::Length(target);
+
+    x16r_hash(input, output, input_len);
 
     SET_BUFFER_RETURN(output, 32);
 }

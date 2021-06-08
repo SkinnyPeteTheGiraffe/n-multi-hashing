@@ -1,5 +1,8 @@
 export interface RpcData {
     bits: string;
-    previousblockhash: string;
+    previousBlockHash: string;
+    nextBlockHash?: string;
     version: number;
+    size?: number;
+    difficulty?: number;
 }
