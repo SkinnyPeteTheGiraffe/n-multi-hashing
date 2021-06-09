@@ -13,3 +13,7 @@ jobs:
         run: yarn build:debug
       - name: Run tests
         run: yarn test
+      - uses: tanmen/jest-reporter@v1
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

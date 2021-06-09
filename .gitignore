@@ -105,3 +105,4 @@ dist
 
 # Project exclusive
 build/
+result.json

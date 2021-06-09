@@ -1,17 +1,18 @@
 {
-  "name": "n-pool-stratum",
+  "name": "n-multi-hashing",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --json --outputFile=result.json --testLocationInResults",
     "build": "tsc",
     "build:binaries": "node-gyp clean && node-gyp configure && node-gyp build",
     "build:debug": "node-gyp clean && node-gyp configure && node-gyp build --debug"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Notorious",
+  "license": "MIT",
+  "files": ["dist/**/*"],
   "devDependencies": {
     "@types/bindings": "^1.5.0",
     "@types/jest": "^26.0.23",
