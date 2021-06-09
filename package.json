@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --json --outputFile=result.json --testLocationInResults",
+    "test": "jest",
     "build": "tsc",
     "build:binaries": "node-gyp clean && node-gyp configure && node-gyp build",
     "build:debug": "node-gyp clean && node-gyp configure && node-gyp build --debug"
@@ -12,11 +12,14 @@
   "keywords": [],
   "author": "Notorious",
   "license": "MIT",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "devDependencies": {
     "@types/bindings": "^1.5.0",
     "@types/jest": "^26.0.23",
     "jest": "^27.0.4",
+    "jest-junit": "^12.1.0",
     "nodemon": "^2.0.7",
     "prettier": "^2.3.0",
     "ts-jest": "^27.0.2",
