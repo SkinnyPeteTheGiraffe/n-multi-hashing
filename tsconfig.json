@@ -10,6 +10,7 @@
     "strictNullChecks": true,
     "removeComments": true,
     "resolveJsonModule": true,
+    "declaration": true,
     "sourceMap": true,
     "strict": true,
     "lib": ["es2018", "esnext.asynciterable"],
