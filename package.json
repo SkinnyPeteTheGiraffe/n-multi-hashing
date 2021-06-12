@@ -1,17 +1,31 @@
 {
   "name": "n-multi-hashing",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A re-write of the Node Multi Hashing library, which provides Javascript bindings for C/C++ based hashing algorithms.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
   "scripts": {
     "test": "jest",
     "clean": "rm -r ./dist",
-    "build": "tsc && yarn build:binaries && mkdir dist/Release && cp -r ./build/Release ./dist/Release",
+    "build": "tsc && yarn build:binaries && cp -r ./build ./dist/build",
     "build:binaries": "node-gyp clean && node-gyp configure && node-gyp build",
     "build:debug": "node-gyp clean && node-gyp configure && node-gyp build --debug"
   },
-  "keywords": [],
+  "keywords": [
+    "hashing",
+    "typescript",
+    "POW",
+    "crypto",
+    "x16r",
+    "kawpow",
+    "scrypt",
+    "sha256",
+    "c11",
+    "lyra2z",
+    "quark",
+    "x11",
+    "argon2"
+  ],
   "author": "Notorious",
   "license": "MIT",
   "files": [
