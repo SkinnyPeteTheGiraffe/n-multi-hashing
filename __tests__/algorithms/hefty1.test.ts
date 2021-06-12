@@ -1,9 +1,9 @@
 import * as hashing from '../../build/Debug/n-multi-hashing.node';
 import { serializeHeader } from '../../src/utils';
 
-const valid = '8500d02bcc680b38f945e734b6c6e96bf7ecd13d6a4c4fbe7db3b9010a4cf2f8';
+const valid = 'a03cfcb6f177391652eed949a3f587f6781469b1f2c6d16935d339057aec5c50';
 
-describe('Testing Fugue Algorithm', () => {
+describe('Testing Hefty Algorithm', () => {
     const nTime = '1390103681';
     const nonce = '128987';
     const merkleTree = Buffer.from('ef3ee42b51e2a19c4820ef182844a36db1201c61eb0dec5b42f84be4ad1a1ca7', 'hex');
@@ -17,8 +17,7 @@ describe('Testing Fugue Algorithm', () => {
         nTime,
         nonce
     );
-    it('Test Valid Fugue Hash', () => {
-        const hashOutBuf = Buffer.alloc(32, 0);
-        expect(hashing.fugue(headerBuffer, hashOutBuf, 32).toString('hex')).toEqual(valid);
+    it('Test Valid Hefty1 Hash', () => {
+        expect(hashing.hefty1(headerBuffer).toString('hex')).toEqual(valid);
     });
 });

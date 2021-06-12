@@ -82,24 +82,22 @@ RVN: RBfEoddXbXDR8fLLyCcvy5FUgdvpdof5f3
 ```
 
 ### Supported Algorithms
-| Algorithms            |                  |                |
-|-----------------------|------------------|----------------|
-| Argon2d               |  Lyra2RE         |  X15           |
-| Argon2i               |  Lyra2REv2       |  X16r*         |
-| Argon2id              |  Lyra2REv3       |  X16rV2*       |
-| Bcrypt*               |  Lyra2z          |  Yescrypt      |
-| Blake*                |  NeoScrypt       |                |
-| boolberry             |  NIST5           |                |
-| C11*                  |  Quark           |                |
-| CryptoNight           |  Qubit           |                |
-| CryptoNight Fast      |  Scrypt*         |                |
-| Fresh*                |  ScryptJane      |                |
-| Fugue*                |  ScryptN         |                |
-| Groestl*              |  SHA1            |                |
-| Groestl Myriad*       |  SHA256d*        |                |
-| Hefty1                |  Shavite3        |                |
-| KAWPOW*               |  Skein           |                |
-| Keccak                |  X11             |                |
-| LBRY                  |  X13             |                |
-
-`* Includes Unit Tests`
+| Unit Test          | Algorithms            | Unit Test          |  Algorithms      | Unit Test          | Algorithms     |
+|--------------------|-----------------------|--------------------|------------------|--------------------|----------------|
+| :white_check_mark: | Argon2d               | :white_check_mark: |  Lyra2RE         | :white_check_mark: |  X15           |
+| :white_check_mark: | Argon2i               | :white_check_mark: |  Lyra2REv2       | :white_check_mark: |  X16r          |
+| :white_check_mark: | Argon2id              | :white_check_mark: |  Lyra2REv3       | :white_check_mark: |  X16rV2        |
+| :white_check_mark: | Bcrypt                | :white_check_mark: |  Lyra2z          | :white_check_mark: |  Yescrypt      |
+| :white_check_mark: | Blake                 | :white_check_mark: |  NeoScrypt       |                    |                |
+| :white_check_mark: | boolberry             | :white_check_mark: |  NIST5           |                    |                |
+| :white_check_mark: | C11                   | :white_check_mark: |  Quark           |                    |                |
+| :white_check_mark: | CryptoNight           | :white_check_mark: |  Qubit           |                    |                |
+| :white_check_mark: | CryptoNight Fast      | :white_check_mark: |  Scrypt          |                    |                |
+| :white_check_mark: | Fresh                 | :white_check_mark: |  ScryptJane      |                    |                |
+| :white_check_mark: | Fugue                 | :white_check_mark: |  ScryptN         |                    |                |
+| :white_check_mark: | Groestl               | :white_check_mark: |  SHA1            |                    |                |
+| :white_check_mark: | Groestl Myriad        | :white_check_mark: |  SHA256d         |                    |                |
+| :white_check_mark: | Hefty1                | :white_check_mark: |  Shavite3        |                    |                |
+| :white_check_mark: | KAWPOW                | :white_check_mark: |  Skein           |                    |                |
+| :white_check_mark: | Keccak                | :white_check_mark: |  X11             |                    |                |
+| :white_check_mark: | LBRY                  | :white_check_mark: |  X13             |                    |                |
