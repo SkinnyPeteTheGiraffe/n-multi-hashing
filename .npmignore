@@ -1,3 +1,9 @@
-src/
 __tests__/
 __types__/
+src/
+tools/
+junit.xml
+jest.config.ts
+webpack.config.js
+config/
+build/

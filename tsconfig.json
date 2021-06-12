@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ES2020",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "dist/",
     "strictNullChecks": true,
     "removeComments": true,
     "resolveJsonModule": true,
+    "noEmit": false,
+    "esModuleInterop": true,
     "sourceMap": true,
     "strict": true,
-    "lib": ["es2018", "esnext.asynciterable"],
-    "typeRoots": [
-      "./__types__", "./node_modules/@types"]
+    "lib": ["ES2020", "DOM", "esnext.asynciterable"],
+    "types": ["node"],
+    "typeRoots": ["./__types__", "./node_modules/@types"],
+    "forceConsistentCasingInFileNames": true
   },
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "__tests__",

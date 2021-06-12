@@ -1,3 +1,3 @@
-import * as bindings from 'bindings';
+import bindings from 'bindings';
 
 export default bindings('n-multi-hashing.node');

@@ -1,23 +1,36 @@
 {
   "name": "n-multi-hashing",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "version": "1.0.1",
+  "description": "A re-write of Node Multi Hashing library, which provides Javascript bindings for C/C++ based hashing algorithms.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "umd:main": "dist/umd/index.js",
+  "types": "dist/types/index.d.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack",
+    "build": "npm run build:cjs && npm run build:esm && npm run build:umd && npm run build:types",
+    "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
+    "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json",
+    "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
+    "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json",
+    "clean": "node tools/cleanup",
+    "package": "npm run build && npm pack",
     "build:binaries": "node-gyp clean && node-gyp configure && node-gyp build",
     "build:debug": "node-gyp clean && node-gyp configure && node-gyp build --debug"
   },
   "keywords": [],
   "author": "Notorious",
   "license": "MIT",
-  "files": [
-    "dist/**/*"
-  ],
+  "repository": {
+    "url": "https://github.com/SkinnyPeteTheGiraffe/n-multi-hashing"
+  },
   "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@types/bindings": "^1.5.0",
     "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
     "browserify-fs": "^1.0.0",
     "buffer": "^6.0.3",
     "copy-webpack-plugin": "^9.0.0",
