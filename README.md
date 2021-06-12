@@ -2,8 +2,6 @@
 [![Build Status](https://github.com/SkinnyPeteTheGiraffe/n-multi-hashing/actions/workflows/test.yml/badge.svg)](https://github.com/SkinnyPeteTheGiraffe/n-multi-hashing/actions/workflows/test.yml?query=branch%3Amain+)
 [![npm](https://img.shields.io/npm/dm/n-multi-hashing)](https://www.npmjs.com/package/n-multi-hashing)
 
-_For list of supported Algorithms, scroll to bottom of README_
-
 A rewrite of [node-multi-hashing](https://github.com/SkinnyPeteTheGiraffe/node-multi-hashing) in Typescript,
 more algorithms, and proper unit testing. This version should be much more stable, as full coverage unit testing, will
 ensure consistency of hashing functions, warning developers of any breaking changes. This version will also include
@@ -28,7 +26,7 @@ While these are not all hard requirements, I have listed what I used to develop/
 `* Can be anything`
 
 ## Getting Started
-A simple usage example to get you started. *Note, that not all algorithms contain the same parameters.*
+A simple usage example to get you started. _Note, that not all algorithms contain the same parameters._
 ```js
 import multiHashing from 'n-multi-hashing';
 
@@ -49,7 +47,7 @@ Building Distribution
 yarn build
 ```
 
-#### Testing
+## Testing
 Building Debug Binaries
 ```shell
 yarn build:debug
@@ -59,21 +57,21 @@ Run Jest
 yarn jest
 ```
 
-### Contributions
+## Contributions
 Anyone is free to fork/clone this project and use at their own will. Though if you would like help develop this project,
 I have listed some things to note in order for your PR to be accepted.
-  * When creating a PR, be descriptive about your changes, and keep your code clean and maintainable.
-  * If adding algorithms, please include associated unit-tests.
-  * Ensure your changes pass the CI/CD pipeline (check the Actions tab).
+* When creating a PR, be descriptive about your changes, and keep your code clean and maintainable.
+* If adding algorithms, please include associated unit-tests.
+* Ensure your changes pass the CI/CD pipeline (check the Actions tab).
 
-### Attributions
-  * [@chuanwc](https://github.com/chuanwc) - Creator of project I originally forked [node-multi-hashing](https://github.com/chuanwc/node-multi-hashing-1) from
-  * [@MintPond](https://github.com/MintPond) - For [KAWPOW](https://github.com/MintPond/hasher-kawpow) implementation
+## Attributions
+* [@chuanwc](https://github.com/chuanwc) - Creator of project I originally forked [node-multi-hashing](https://github.com/chuanwc/node-multi-hashing-1) from
+* [@MintPond](https://github.com/MintPond) - For [KAWPOW](https://github.com/MintPond/hasher-kawpow) implementation
 
-### Want to say thank you
+## Want to say thank you
 All I ask is you like and/or contribute to the project! :sparkling_heart:
 
-#### Want to help out more
+### Want to help out more
 I don't need anything else, but if you would like, buy me some :coffee: maybe:
 ```yml
 BTC: bc1qmqwa6jvus9kr3nusexvuewt0h75jj5qwka8a2u
