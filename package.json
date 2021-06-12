@@ -1,6 +1,6 @@
 {
   "name": "n-multi-hashing",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "A re-write of the Node Multi Hashing library, which provides Javascript bindings for C/C++ based hashing algorithms.",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
