@@ -1,4 +1,6 @@
 # N-Multi-Hashing
+[![Build Status](https://github.com/SkinnyPeteTheGiraffe/n-multi-hashing/actions/workflows/test.yml/badge.svg)](https://github.com/SkinnyPeteTheGiraffe/n-multi-hashing/actions/workflows/test.yml?query=branch%3Amain+)
+[![npm](https://img.shields.io/npm/dm/n-multi-hashing)](https://www.npmjs.com/package/n-multi-hashing)
 
 _For list of supported Algorithms, scroll to bottom of README_
 
@@ -7,12 +9,12 @@ more algorithms, and proper unit testing. This version should be much more stabl
 ensure consistency of hashing functions, warning developers of any breaking changes. This version will also include
 more algorithms, and will continue to add them as development continues.
 
-### Inspiration
+## Inspiration
 When I first got into crypto development, I forked [node-multi-hashing](https://github.com/SkinnyPeteTheGiraffe/node-multi-hashing)
 and added a few algorithms, but admittedly was still novice in terms of development. I have gained much more experience,
 and decided to re-write (not algorithms) my past work, and added features I have found to be valuable (such as unit testing).
 
-### Requirements
+## Requirements
 While these are not all hard requirements, I have listed what I used to develop/build this project to give more guidance.
 
 | Requirement  |  Version |
@@ -25,7 +27,15 @@ While these are not all hard requirements, I have listed what I used to develop/
 
 `* Can be anything`
 
-### Getting Started
+## Getting Started
+A simple usage example to get you started.
+```js
+import multiHashing from 'n-multi-hashing';
+
+const hash = multiHashing.x16r( Buffer.from('ffff0000', 'hex'));
+```
+
+## How To Build
 Install Dependencies
 ```shell
 yarn
@@ -52,25 +62,24 @@ yarn jest
 ### Contributions
 Anyone is free to fork/clone this project and use at their own will. Though if you would like help develop this project,
 I have listed some things to note in order for your PR to be accepted.
-* When creating a PR, be descriptive about your changes, and keep your code clean and maintainable.
-* If adding algorithms, please include associated unit-tests.
-* Ensure your changes pass the CI/CD pipeline (check the Actions tab).
+  * When creating a PR, be descriptive about your changes, and keep your code clean and maintainable.
+  * If adding algorithms, please include associated unit-tests.
+  * Ensure your changes pass the CI/CD pipeline (check the Actions tab).
 
 ### Attributions
-* [@chuanwc](https://github.com/chuanwc) - Creator of project I originally forked [node-multi-hashing](https://github.com/chuanwc/node-multi-hashing-1) from
-* [@MintPond](https://github.com/MintPond) - For [KAWPOW](https://github.com/MintPond/hasher-kawpow) implementation
+  * [@chuanwc](https://github.com/chuanwc) - Creator of project I originally forked [node-multi-hashing](https://github.com/chuanwc/node-multi-hashing-1) from
+  * [@MintPond](https://github.com/MintPond) - For [KAWPOW](https://github.com/MintPond/hasher-kawpow) implementation
 
-### Want to say thank you?
+### Want to say thank you
 All I ask is you like and/or contribute to the project! :sparkling_heart:
 
-#### Want to help out more?
+#### Want to help out more
 I don't need anything else, but if you would like, buy me some :coffee: maybe:
-```
+```yml
 BTC: bc1qmqwa6jvus9kr3nusexvuewt0h75jj5qwka8a2u
 ETH: 0x5BcEcC9710a3Aa47F84BaCb1E5EE6591dEa7a32e
 RVN: RBfEoddXbXDR8fLLyCcvy5FUgdvpdof5f3
 ```
-
 
 ### Supported Algorithms
 | Algorithms            |                  |                |
