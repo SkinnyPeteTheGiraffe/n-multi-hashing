@@ -28,11 +28,11 @@ While these are not all hard requirements, I have listed what I used to develop/
 `* Can be anything`
 
 ## Getting Started
-A simple usage example to get you started.
+A simple usage example to get you started. *Note, that not all algorithms contain the same parameters.*
 ```js
 import multiHashing from 'n-multi-hashing';
 
-const hash = multiHashing.x16r( Buffer.from('ffff0000', 'hex'));
+const hash = multiHashing.x16r(Buffer.from('ffff0000', 'hex'));
 ```
 
 ## How To Build
